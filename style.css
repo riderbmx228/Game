@@ -1,0 +1,65 @@
+body {
+    background: #fff;
+}
+
+.spaner {
+    width: 100%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+h1 span {
+    text-align: center;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.game {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.hole {
+    flex-basis: 33.33%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hole::after {
+    display: block;
+    background: url(curcle.png) bottom center no-repeat;
+    background-size: contain;
+    content: '';
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+}
+
+.mole {
+    background: url(chel.png) bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition-duration: .4s all;
+}
+
+.hole.up .mole {
+    top: 0;
+}
